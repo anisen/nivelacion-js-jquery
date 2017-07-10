@@ -20,6 +20,12 @@ $(document).ready( function(){
 */
 function renderHighlightedRecipes(recipesArray) {
 	console.log('Recipes: ', recipesArray);
+    recipesArray.forEach(function(i){
+    	if (i.highlighted==true) {
+    		renderRecipe(i);
+    	}
+    })
+
 }
 
 /*
