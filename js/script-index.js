@@ -3,12 +3,13 @@ $(document).ready( function(){
 	function hide(){
 		$('#back-index').hide();
 	}hide();
-	
 
 	function printNews(){
-		$('.title-callout').append('NUEVA RECETA');
-	}
-	printNews();
+		$('.title-callout').click(function(event) {
+			$('#p-contenedor-nueva').append('NUEVAS RECETAS')
+		});
+	}printNews();
+
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
 
